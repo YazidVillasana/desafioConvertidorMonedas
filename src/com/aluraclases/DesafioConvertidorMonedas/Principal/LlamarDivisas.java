@@ -1,9 +1,8 @@
 package com.aluraclases.DesafioConvertidorMonedas.Principal;
 
-public record LlamarDivisas(
-        int USD,
-        int ARS,
-        int BSR,
-        int COP )
+import java.awt.*;
+import java.lang.reflect.Array;
+
+public record LlamarDivisas( String conversion_rates, float USD)
 {
 }
