@@ -28,9 +28,13 @@ public class Principal {
                 """);
 
            try {
-               var opcion = lectura.nextLine();
+               var opcion = lectura.nextInt();
                switch (opcion){
-
+                   case 1:
+                       System.out.println("Ingrese el valor que deseas convertir: ");
+                       var valor = lectura.nextInt();
+                       CompararPrecios compara = consulta.comparaDivisa("USD", "ARS", valor);
+                       System.out.println("El valor " + valor + "[ARS] corresponde al valor final de =>>> ");
 
 
                }

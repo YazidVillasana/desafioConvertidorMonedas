@@ -1,4 +1,4 @@
 package com.aluraclases.DesafioConvertidorMonedas.Principal;
 
-public record CompararPrecios(String base_code, String target_code, float conversion_rate, float conversion_result) {
+public record CompararPrecios(String base_code, float conversion_result, String target_code) {
 }
