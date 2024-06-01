@@ -21,34 +21,58 @@ public class Principal {
        while (opcion != 7){
            System.out.println("""
                 ********************************************************
-                Bienvenido/a al Conversor de Moneda ^u^
+                Bienvenido/a al Conversor de Monedas ^u^
         
-                1) Dólar ==> Peso argentino
-                2) Peso argentino ==> Dólar
-                3) Dólar ==> Real brasileño
-                4) Real brasileño ==> Dólar
-                5) Dólar ==> Peso colombiano
-                6) Peso colombiano ==> Dólar
+                1) Dólar           ==>  Real brasileño 
+                2) Real brasileño  ==>  Dólar
+                3) Dólar           ==>  Peso chileno
+                4) Peso chileno    ==>  Dólar
+                5) Dólar           ==>  Peso colombiano
+                6) Peso colombiano ==>  Dólar
                 7) Salir
-                Elija una opción
+                ¡Elija una opción!
                 ********************************************************""");
 
            try {
                opcion = lectura.nextInt();
 
                    if (opcion != 7) {
-                       System.out.println("Ingrese el valor que deseas convertir: ");
-                       cantidad.setValor(lectura.nextInt());
+
+                       if (opcion >= 1 && opcion <= 7){
+                           System.out.println("Ingrese el valor que deseas convertir: ");
+                           cantidad.setValor(lectura.nextInt());
+                       }
                    }
                    switch (opcion) {
                        case 1:
-                           CompararPrecios compara = consulta.comparaDivisa("USD", "ARS", cantidad.getValor());
+                           CompararPrecios compara = consulta.comparaDivisa("USD", "BRL", cantidad.getValor());
                            Divisas resultado = new Divisas(cantidad.getValor(), compara);
                            System.out.println(resultado);
                            break;
                        case 2:
-                           compara = consulta.comparaDivisa("ARS", "USD", cantidad.getValor());
-                           System.out.println(compara);
+                           compara = consulta.comparaDivisa("BRL", "USD", cantidad.getValor());
+                           resultado = new Divisas(cantidad.getValor(), compara);
+                           System.out.println(resultado);
+                           break;
+                       case 3:
+                           compara = consulta.comparaDivisa("USD", "CLP", cantidad.getValor());
+                           resultado = new Divisas(cantidad.getValor(), compara);
+                           System.out.println(resultado);
+                           break;
+                       case 4:
+                           compara = consulta.comparaDivisa("CLP", "USD", cantidad.getValor());
+                           resultado = new Divisas(cantidad.getValor(), compara);
+                           System.out.println(resultado);
+                           break;
+                       case 5:
+                           compara = consulta.comparaDivisa("USD", "COP", cantidad.getValor());
+                           resultado = new Divisas(cantidad.getValor(), compara);
+                           System.out.println(resultado);
+                           break;
+                       case 6:
+                           compara = consulta.comparaDivisa("COP", "USD", cantidad.getValor());
+                           resultado = new Divisas(cantidad.getValor(), compara);
+                           System.out.println(resultado);
                            break;
                        case 7:
                            System.out.println("Saliendo de la aplicación... Gracias por usar nuestro programa.");
@@ -61,7 +85,7 @@ public class Principal {
 
                }catch (RuntimeException e){
                    System.out.println(e.getMessage());
-                   System.out.println("Finalizando la aplicación.");
+                   System.out.println("Error al ingresar carácteres. Finalizando la aplicación.");
                    opcion = 7;
                }
 

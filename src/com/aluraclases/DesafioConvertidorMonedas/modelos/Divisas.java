@@ -34,7 +34,6 @@ public class Divisas {
     public void setDivisaConvertida(float divisaConvertida) {
         this.divisaConvertida = divisaConvertida;}
 
-
     @Override
     public String toString() {
         return "El valor de " + valor +
