@@ -17,22 +17,12 @@ public class Divisas {
     public Divisas() {
 
     }
+
+
     public float getValor() {
         return valor;}
     public void setValor(float valor) {
         this.valor = valor;}
-    public String getDivisaEntrada() {
-        return divisaEntrada;}
-    public void setDivisaEntrada(String divisaEntrada) {
-        this.divisaEntrada = divisaEntrada;}
-    public String getDivisaSalida() {
-        return divisaSalida;}
-    public void setDivisaSalida(String divisaSalida) {
-        this.divisaSalida = divisaSalida;}
-    public float getDivisaConvertida() {
-        return divisaConvertida;}
-    public void setDivisaConvertida(float divisaConvertida) {
-        this.divisaConvertida = divisaConvertida;}
 
     @Override
     public String toString() {
