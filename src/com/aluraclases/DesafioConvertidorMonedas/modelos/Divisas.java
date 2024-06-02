@@ -3,21 +3,29 @@ import com.aluraclases.DesafioConvertidorMonedas.Principal.CompararPrecios;
 
 public class Divisas {
 
+    private String fecha;
     private float valor;
     private String divisaEntrada;
     private String divisaSalida;
     private float divisaConvertida;
 
-    public Divisas(float valor, CompararPrecios miCompararPrecios ){
+    public Divisas(String fecha,float valor, CompararPrecios miCompararPrecios ){
+        this.fecha = fecha;
         this.valor = valor;
         this.divisaEntrada = miCompararPrecios.base_code();
         this.divisaSalida = miCompararPrecios.target_code();
         this.divisaConvertida = miCompararPrecios.conversion_result();
     }
-    public Divisas() {
 
+    public Divisas() {
     }
 
+    public String getFecha() {
+        return fecha;
+    }
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
 
     public float getValor() {
         return valor;}
