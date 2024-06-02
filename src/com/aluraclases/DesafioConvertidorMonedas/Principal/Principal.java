@@ -28,7 +28,7 @@ public class Principal {
 
         System.out.println("""
                 ********************************************************
-                Bienvenido/a al Conversor de Monedas.
+                Bienvenido/a al Conversor de Monedas. 
                 Instrucciones:
                 1. Eliga y escriba el código de divisa a convertir
                 2. Introduzca el código de divisa objetivo la cuál se calculará.
