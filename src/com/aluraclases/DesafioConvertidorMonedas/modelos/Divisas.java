@@ -21,16 +21,22 @@ public class Divisas {
     }
 
     public String getFecha() {
-        return fecha;
-    }
+        return fecha;}
     public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
-
+        this.fecha = fecha;}
     public float getValor() {
         return valor;}
     public void setValor(float valor) {
         this.valor = valor;}
+
+    public String getDivisaEntrada() {
+        return divisaEntrada;}
+    public void setDivisaEntrada(String divisaEntrada) {
+        this.divisaEntrada = divisaEntrada;}
+    public String getDivisaSalida() {
+        return divisaSalida;}
+    public void setDivisaSalida(String divisaSalida) {
+        this.divisaSalida = divisaSalida;}
 
     @Override
     public String toString() {
