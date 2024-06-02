@@ -33,18 +33,17 @@ public class Principal {
                 1. Eliga y escriba el código de divisa a convertir
                 2. Introduzca el código de divisa objetivo la cuál se calculará.
                 3. Ingrese el mónto a convertir.""");
-
         while (true){
             System.out.println("""
                 ********************************************************
-                Código de Divisa | Nombre de Divisa         Código de Divisa | Nombre de Divisa
+                Código de Divisa | Nombre de Divisa             Código de Divisa | Nombre de Divisa
                 
-                MXN                 Nuevo peso méxicano.    COP                 Peso colombiano
-                BRL                 Real brasileño.         CHF                 Franco Suizo
-                USD                 Dólar americano         CNY                 Renminbi yuan chino
-                CAD                 Dólar canadiense        EUR                 Euro
-                ARS                 Peso argentino          JPY                 Yen japones
-                CLP                 Peso chileno            GBP                 Libra esterlina
+                MXN                 Nuevo peso méxicano.        COP                 Peso colombiano
+                BRL                 Real brasileño.             CHF                 Franco Suizo
+                USD                 Dólar americano             CNY                 Renminbi yuan chino
+                CAD                 Dólar canadiense            EUR                 Euro
+                ARS                 Peso argentino              JPY                 Yen japones
+                CLP                 Peso chileno                GBP                 Libra esterlina
                
                 Salir               Salir de la aplicación
                 ********************************************************""");
@@ -53,13 +52,11 @@ public class Principal {
                 System.out.println("Ingrese el código de la divisa a convertir:");
                 base.setDivisaEntrada(lectura.nextLine().toUpperCase());
                 if (base.getDivisaEntrada().equalsIgnoreCase("salir")){
-                    break;
-                }
+                    break;}
                 System.out.println("Ingrese el código de divisa a calcular:");
                 target.setDivisaSalida(lectura.nextLine().toUpperCase());
                 if (target.getDivisaSalida().equalsIgnoreCase("salir")){
-                    break;
-                }
+                    break;}
                 System.out.println("Ingrese el valor que deseas convertir: ");
                 cantidad.setValor(monto.nextInt());
                 fecha.setFecha((fechaHora.format(LocalDateTime.now())));
@@ -70,12 +67,10 @@ public class Principal {
             }catch (RuntimeException e){
                 System.out.println(e.getMessage());
                 System.out.println("Error al ingresar carácteres. Finalizando la aplicación.");
-                break;
-            }
+                break;}
             if (!base.getDivisaEntrada().equals("salir") || !target.getDivisaSalida().equals("salir")){
                 recordConsulta.add(resultado);
-                System.out.println(resultado);
-            }
+                System.out.println(resultado);}
         }
         historial.guardarHistorial(recordConsulta);
     }
