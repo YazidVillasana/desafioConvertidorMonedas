@@ -110,8 +110,8 @@ Al iniciar, el usuario será bienvenido y mostrará instrucciones de 3 sencillos
 Por cuestiones de error humano, no se generaron distintas "branches" al momento de realizar los commits al repositorio, así que las versiones anteriores e iniciales del programa no se encuentra disponible. Sin embargo, me encontré realizando una bitacora en cada momento que creí que me encontraba realizando un push tras cambios y progresos significativos. 
 <br>Asi, a continuación, una bitacora explicando el procedimiento a groso modo de la realización de este programa.
 
--Bitacora: 
-1.01 Empezando a configurar el entorno de trabajo.
+<br>-Bitacora: 
+<br>1.01 Empezando a configurar el entorno de trabajo.
 
 1.02 Agregando clase ConvertidorDeMonedas donde se configurará la API.
 
